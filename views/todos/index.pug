@@ -1,0 +1,7 @@
+h1 todos
+ul
+	each todo in todos
+		li
+			a(href=`/todos/${todo.id}`)=todo.name
+
+a(href="/") back
