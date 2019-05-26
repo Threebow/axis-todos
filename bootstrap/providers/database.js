@@ -8,7 +8,13 @@ const {Database} = require("@threebow/axis"),
 /*---------------------------------------------------------------------------
 	Instantiate database
 ---------------------------------------------------------------------------*/
-module.exports = new Database({
-	options: require("../knexfile"),
-	models: path.join(__dirname, "./models")
-});
+module.exports = (app) => {
+	let db = new Database({
+		options: require(path.join(process.cwd(), "./knexfile")),
+		models: path.join(process.cwd(), "./database/models")
+	});
+
+	app.setDatabase(db);
+
+	return db;
+};

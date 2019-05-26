@@ -1,7 +1,7 @@
 /*---------------------------------------------------------------------------
 	Import modules
 ---------------------------------------------------------------------------*/
-const {App} = require("axis"),
+const {App} = require("../axis"),
 	  path = require("path");
 
 require("dotenv").config();
@@ -11,24 +11,9 @@ require("dotenv").config();
 	Set up the axis app
 ---------------------------------------------------------------------------*/
 let app = new App({
-	//View stuff
-	viewEngineName: "pug",
-	viewEngine: require("pug"),
-	viewDir: path.join(__dirname, "views"),
-
-	//Session stuff
-	session: {
-		secret: process.env.APP_SECRET,
-		resave: false,
-		saveUninitialized: false
-	},
-
-	//Public directory
-	publicDir: path.join(__dirname, "public"),
-
 	//Functionality
 	controllers: path.join(__dirname, "./controllers"),
-	database: require("./database"),
+	container: require("./bootstrap/container"),
 	routers: [
 		require("./routes/web")
 	]

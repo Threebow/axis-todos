@@ -1,5 +1,5 @@
 const path = require("path"),
-	  templates = require("axis/templates");
+	  templates = require("@threebow/axis/templates");
 
 require("dotenv").config();
 

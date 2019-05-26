@@ -1,5 +1,5 @@
 //Create the router
-const {RouteGroup} = require("axis");
+const {RouteGroup} = require("@threebow/axis");
 
 //Controllers, Models
 module.exports = ({PagesController, TodoController}, {Todo}) => {
