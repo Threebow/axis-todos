@@ -14,7 +14,7 @@
 		"express": "^4.17.1",
 		"express-flash": "0.0.2",
 		"express-session": "^1.16.1",
-		"knex": "^0.16.3",
+		"knex": "^0.19.5",
 		"mysql2": "^1.6.5",
 		"objection": "^1.6.7",
 		"pug": "^2.0.3"
