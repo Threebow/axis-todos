@@ -1,0 +1,141 @@
+//Main brand variables
+$primary: #9e00fd;
+$white: #ffffff;
+$paper: #f2f2f2;
+$dark: rgb(35, 35, 35);
+$darker: rgb(25, 25, 25);
+
+//Color settings
+$success: #019875;
+$danger: #9a2c2c;
+
+$background: $darker;
+$background-inverse: $white;
+
+$background-lighter: $dark;
+$background-lighter-inverse: $paper;
+
+$text: $paper;
+$text-inverse: $dark;
+
+$text-strong: $white;
+$text-strong-inverse: $darker;
+
+//Other customization
+$body-family: 'Libre Franklin', sans-serif;
+$button-family: 'Roboto', sans-serif;
+$body-weight: 400;
+$control-radius: 3px;
+
+$body-color: $text;
+$body-background-color: $background;
+
+$title-color: $text-strong;
+$subtitle-color: $text;
+
+$code: $text-strong;
+
+//Extra colors
+$custom-colors: (
+	"darker": ($darker, $paper)
+);
+
+//Navbar
+$navbar-background-color: $dark;
+$navbar-height: 5rem;
+$navbar-item-color: $paper;
+$navbar-item-hover-color: $white;
+$navbar-item-hover-background-color: rgba($paper, 0.1);
+$navbar-dropdown-background-color: $paper;
+$navbar-dropdown-border-top: 0 solid black;
+$navbar-divider-background-color: $darker;
+$navbar-divider-height: 1px;
+$navbar-dropdown-item-hover-color: $dark;
+$navbar-dropdown-item-hover-background-color: rgba($dark, 0.1);
+$navbar-dropdown-radius: 2px;
+$navbar-dropdown-arrow: $primary;
+$navbar-item-active-color: $primary;
+$navbar-item-active-background-color: rgba($primary, 0.1);
+$navbar-burger-color: $paper;
+
+//Card
+//$card-color: $paper;
+//$card-header-color: $paper;
+//$card-header-background-color: $primary;
+//$card-background-color: $dark;
+$card-shadow: 2px 2px 4px rgba($darker, 0.15);
+
+//Input
+$input-color: $text-strong;
+$input-border-color: rgba($dark, 0.4);
+$input-hover-border-color: $primary;
+$input-focus-border-color: $primary;
+$input-focus-box-shadow-color: rgba($primary, 0.25);
+$input-focus-box-shadow-size: 0 0 0 2px;
+$input-background-color: rgba(white, 0.07);
+
+//File input
+$file-cta-background-color: $input-background-color;
+$file-border-color: $darker;
+$file-name-border-color: $darker;
+
+//Label
+$label-color: $text-strong;
+
+//Pagination
+$pagination-border-color: lighten($dark, 10);
+$pagination-current-border-color: $primary;
+$pagination-focus-border-color: $primary;
+$pagination-current-background-color: $primary;
+$pagination-hover-color: $text-strong;
+$pagination-hover-border-color: $primary;
+
+//Dropdown
+$dropdown-item-active-background-color: $primary;
+
+//Tabs
+$tabs-border-bottom-color: transparent;
+$tabs-link-color: $text;
+$tabs-link-active-color: $primary;
+$tabs-link-active-border-bottom-color: $primary;
+$tabs-toggle-link-active-background-color: $primary;
+$tabs-toggle-link-active-border-color: $primary;
+$tabs-toggle-link-border-color: rgba($paper, 0.2);
+$tabs-toggle-link-hover-color: $text-strong;
+$tabs-toggle-link-hover-background-color: rgba($paper, 0.1);
+$tabs-toggle-link-hover-border-color: rgba($paper, 0.1);
+
+//Modal card
+$modal-card-head-background-color: $background-lighter;
+$modal-card-body-background-color: $background;
+$modal-card-head-border-bottom: 1px solid $primary;
+$modal-card-foot-border-top: 1px solid $primary;
+$modal-card-title-color: $text-strong;
+
+//Table
+$table-background-color: $dark;
+$table-head-background-color: lighten($dark, 2);
+$table-striped-row-even-background-color: darken($dark, 1);
+$table-cell-border: 1px solid $darker;
+
+//Box
+$box-background-color: $dark;
+$box-radius: 4px;
+$box-shadow: 0 4px 4px rgba(black, 0.15);
+
+//Footer
+$footer-background-color: $dark;
+
+//Menu
+$menu-item-active-background-color: $primary;
+
+//Images
+$dimensions: 16 24 32 48 64 96 128 256;
+
+//Panels
+$panel-item-border: none;
+$panel-heading-background-color: lighten($dark, 4);
+$panel-item-border: 1px solid $darker;
+.panel-block {
+	background-color: $box-background-color !important;
+}

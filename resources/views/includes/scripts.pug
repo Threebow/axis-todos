@@ -1,0 +1,9 @@
+script(type="text/javascript").
+	//Current logged in user data
+	window.User = !{user ? JSON.stringify(user) : 'null'};
+
+	//List of all routes mapped by their names
+	window.RouteList = !{JSON.stringify(routeNameCache)};
+
+block scripts
+	script(src="/js/app.js")

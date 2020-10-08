@@ -1,0 +1,17 @@
+extends /layouts/base
+
+block base
+	#content-wrapper
+		section.section
+			.container
+				nav.level
+					.level-left
+						.level-item
+							h1=title
+					.level-right
+						block level
+
+				include /includes/flash
+				block content
+
+	site-footer(title=process.env.APP_NAME, platform-version=version)

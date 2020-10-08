@@ -1,0 +1,140 @@
+@charset "utf-8";
+
+//Import variables
+@import "variables";
+
+//Import bulma
+@import "~bulma/bulma.sass";
+
+//Import vue multiselect css
+@import "~vue-multiselect/dist/vue-multiselect.min.css";
+
+//Import font
+@import url('https://fonts.googleapis.com/css?family=Roboto:400|Libre+Franklin:300,600');
+
+//Input animations
+.input, .textarea, .select, .CodeMirror {
+	transition: all 300ms;
+}
+
+//Give headers sizes from bulma
+@for $i from 1 through 6 {
+	h#{$i} {
+		@extend .is-size-#{$i};
+		font-family: 'Libre Franklin', sans-serif;
+		font-weight: 600;
+	}
+}
+
+//Tables
+.has-aligned-rows td {
+	vertical-align: middle !important;
+}
+
+option {
+	color: $text-strong-inverse;
+
+	&[disabled] {
+		color: lighten($text-strong-inverse, 40);
+	}
+}
+
+.is-same-height {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+//Notifications
+.notification:not(:last-child) {
+	margin-bottom: 1rem;
+}
+
+.notification {
+	background-color: $white;
+	color: $text !important;
+
+	@each $label, $color in $colors {
+		&.is-#{$label} {
+			$color: nth($color, 1);
+
+			border-left: 6px solid $color;
+			background-color: rgba($color, 0.2);
+		}
+	}
+}
+
+//Circular
+.is-circular {
+	border-radius: 50%;
+}
+
+//Custom button styling
+.button {
+	box-shadow: 1px 1px 3px rgba($darker, 0.10);
+}
+
+.is-full {
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+}
+
+.sidebar {
+	background-color: $background-lighter;
+	padding: 4rem;
+}
+
+//Remove display
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type=number] {
+	-moz-appearance: textfield;
+}
+
+.is-smaller {
+	font-size: 0.75em;
+}
+
+.has-indent {
+	text-indent: 1em;
+}
+
+.table {
+	box-shadow: $box-shadow;
+}
+
+[v-cloak] {
+	display: none;
+}
+
+.box {
+	border-bottom: 3px solid $primary;
+}
+
+.is-content {
+	font-size: 1.1rem;
+}
+
+#app {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+#content-wrapper {
+	flex: 1;
+}
+
+.is-empty-text {
+	color: $paper;
+	opacity: 0.5;
+	font-size: 1.5rem;
+	font-style: italic;
+	text-align: center;
+	margin: 3rem 0;
+}

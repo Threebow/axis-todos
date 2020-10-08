@@ -1,0 +1,7 @@
+{
+	"ignore": [
+		"public/js/*.js",
+		"public/css/*.css",
+		"mix-manifest.json"
+	]
+}

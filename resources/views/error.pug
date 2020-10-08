@@ -1,0 +1,20 @@
+extends /layouts/base
+
+block title
+	- const title = code;
+
+block base
+	.hero.is-fullheight
+		.hero-body
+			.container.has-text-centered
+				h1.title #{code}
+				if(code === 403)
+					p.subtitle You're not allowed here.
+				else if(code === 404)
+					p.subtitle The page you were looking for could not be found.
+				else
+					p.subtitle This shouldn't happen - please contact us with the following event ID:
+					code=eventId
+					br
+
+				a.button.is-primary.is-large.has-margin-top(href=route("index")) Go Home

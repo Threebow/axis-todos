@@ -1,0 +1,40 @@
+extends /layouts/main
+
+block title
+	- let title = `Todo #${todo.id}`;
+
+block level
+	.level-item
+		delete-button(resource=route("todos.destroy", todo), redirect=route("todos.index"))
+			icon(icon="fas fa-trash")
+			span Delete
+
+	.level-item
+		a.button.is-danger(href=route("todos.index"))
+			icon(icon="fas fa-arrow-left")
+			span Go Back
+
+block content
+	.columns.is-multiline
+		.column.is-two-thirds
+			.box
+				form(method="POST", action=route("todos.update", todo))
+					csrf
+
+					.field
+						label.label Title
+						.control
+							input.input(type="text", name="title", value=todo.title, required)
+
+					.field
+						label.label Description
+						.control
+							textarea.textarea(name="description")=todo.description
+
+					.is-clearfix
+						button.button.is-primary.is-pulled-right(type="submit") Save
+
+		.column.is-one-third
+			.box
+				pre
+					code=JSON.stringify(todo, null, 4)

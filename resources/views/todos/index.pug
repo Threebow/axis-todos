@@ -1,0 +1,40 @@
+extends /layouts/main
+
+block title
+	- const title = "Todos";
+	- const badge = todos.total;
+
+block level
+	.level-item
+		search-bar(placeholder="Search by title...", query-param="search")
+
+	.level-item
+		form(method="POST", action=route("todos.store"))
+			csrf
+			button.button.is-success(type="submit") New Todo
+
+	.level-item
+		a.button.is-danger(href=route("index"))
+			icon(icon="fas fa-arrow-left")
+			span Go Back
+
+block content
+	if(todos.results.length > 0)
+		.table-container
+			table.table.is-striped.is-fullwidth
+				thead
+					tr
+						th Todo
+						th.has-text-centered
+							icon(icon="fas fa-cog")
+				tbody
+					each todo in todos.results
+						tr.has-aligned-rows
+							td=todo.title
+							td.is-narrow
+								a.button.is-primary(href=route("todos.show", todo))
+									icon(icon="fas fa-eye")
+
+		pagination(:page=pageNumber, :total=todos.total, :per-page=PER_PAGE)
+	else
+		.is-empty-text There are no todos that match this search criteria.
