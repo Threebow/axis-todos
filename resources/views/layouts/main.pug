@@ -8,6 +8,11 @@ block base
 					.level-left
 						.level-item
 							h1=title
+
+						if(badge)
+							.level-item
+								span.tag.is-primary.is-large=badge
+
 					.level-right
 						block level
 
